@@ -1,0 +1,56 @@
+<html lang="sv">
+ 	<head>
+		<style type="text/css">
+			fieldset
+			{
+				width: 1020px ;
+				padding: 10px ;
+				overflow: hidden ;
+				margin: 0px ;
+				border: dotted ;
+				border-width: 3px ;
+				border-color: #000000 ;
+			}
+			
+			legend
+			{
+				font-family: sans-serif ;
+				font-size: 20pt ;
+				font-weight: bold ;
+				text-decoration: none ;
+				background-color: #ffffff ;
+			}
+
+			iframe
+			{
+				width: 1020px ;
+				overflow: hidden ;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onbeforeunload = function () 
+			{
+				window.scrollTo(0 , 0) ;
+			}
+			
+			function changeHeight(id , factor)
+			{
+				document.getElementById(id).height = parseInt(document.getElementById(id).height) + factor ;
+			}
+		</script>
+	</head>
+	<body>
+<?php
+	include ("funcs.php") ;
+	init() ;
+	global $data ;
+	
+	foreach ($data as $key => $i)
+	{
+		echo t(2) . '<fieldset id="' . $key . '">' . t(3) . '<legend>' . $i[0] . '</legend>' . makeMenu($key) .  t(2)  . '</fieldset><br>' ;
+	}
+	echo t(0) ;
+?>
+	</body>
+</html>
+
