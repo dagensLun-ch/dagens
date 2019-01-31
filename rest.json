@@ -1,0 +1,77 @@
+{
+  "Rac": {
+    "NAM": "Racines",
+    "URL": "http://racines.se/meny/",
+    "HGT": 2200
+  },
+  "GGS": {
+    "NAM": "Gefle Gourmetservice",
+    "URL": "http://sandbackapark.se/veckanslunch",
+    "HGT": 1200
+  },
+  "DLT": {
+    "NAM": "Din lokaltidning",
+    "URL": "dlt.php",
+    "HGT": 4500
+  },
+  "Ode": {
+    "NAM": "Oden",
+    "URL": "http://bistrooden.se/lunch/",
+    "HGT": 900
+  },
+  "GAr": {
+    "NAM": "G:son Arena",
+    "URL": "http://goranssonarena.se/om-restaurangen/lunchmeny",
+    "HGT": 1500
+  },
+  "Fol": {
+    "NAM": "Folkets hus",
+    "URL": "http://www.sandviken.fh.se/dagens-lunch",
+    "HGT": 1300
+  },
+  "Cor": {
+    "NAM": "Coromantmässen",
+    "URL": "cor.html",
+    "HGT": 1100
+  },
+  "Sto": {
+    "NAM": "Storsjömässen",
+    "URL": "sto.html",
+    "HGT": 1100
+  },
+  "LGu": {
+    "NAM": "Lunchguide.nu",
+    "URL": "http://lunchguide.nu/sandviken",
+    "HGT": 1200
+  },
+  "Mah": {
+    "NAM": "Maharane",
+    "URL": "mah.php",
+    "HGT": 1350
+  },
+  "Kan": {
+    "NAM": "Kanalen",
+    "URL": "http://www.kanalgarden.se/restaurang-kanalen",
+    "HGT": 1000
+  },
+  "Mul": {
+    "NAM": "Mulligans",
+    "URL": "http://www.mulliganspub.nu/lunch.html",
+    "HGT": 900
+  },
+  "Sel": {
+    "NAM": "Selmas",
+    "URL": "http://www.selmas.se/lunchmeny/",
+    "HGT": 1000
+  },
+  "TrB": {
+    "NAM": "Trebo brygga",
+    "URL": "http://www.trebobrygga.se/",
+    "HGT": 1500
+  },
+  "Hqv": {
+    "NAM": "Högbo Qvarn",
+    "URL": "http://www.hogboqvarn.se/lunchmeny",
+    "HGT": 900
+  }
+}
