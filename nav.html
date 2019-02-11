@@ -27,20 +27,20 @@
 			const bokst = -1 == [1,2,21,22,31].indexOf(datum) ? "e" : "a" ;                                                                                                 // a eller e beroende på dag i månaden                   
 			const svDat = dagen + datum + ":" + bokst + " " + manad ;
 			
+			const xmlhttp = new XMLHttpRequest();
+			const url = "rest.json";
+
+			xmlhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					const data = JSON.parse(this.responseText);
+					alert(data) ;
+				}
+			};
+			xmlhttp.open("GET", url, true);
+			xmlhttp.send();	
 			
+		
 			
-			function loadDoc() {
-				var xhttp = new XMLHttpRequest();
-				xhttp.onreadystatechange = function() {
-					if (this.readyState == 4 && this.status == 200) {
-						return this ;
-					}
-				};
-				xhttp.open("GET", "https://dagenslun-ch.github.io/dagens/rest.json", true);
-				xhttp.send();
-			}
-			
-		alert( loadDoc() );
 		</script>
 	</body>
 </html>
