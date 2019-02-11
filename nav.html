@@ -18,6 +18,7 @@
 	</head>
 	<body>
 		<script>
+			// bygg svensk datumsträng:
 			const svDag = ["s&ouml;n" , "m&aring;n" , "tis" , "ons" , "tors" , "fre" , "l&ouml;r"] ;                                                                        // svenska veckodagar
 			const svMan = ["NULL" , "januari" , "februari" , "mars" , "april" , "maj" , "juni" , "juli" , "augusti" , "september" , "oktober" , "november" , "december"] ;  // svenska månader
 			const d = new Date() ;                                                                                                                                          // datumombjekt
@@ -27,17 +28,15 @@
 			const bokst = -1 == [1,2,21,22,31].indexOf(datum) ? "e" : "a" ;                                                                                                 // a eller e beroende på dag i månaden                   
 			const svDat = dagen + datum + ":" + bokst + " " + manad ;
 			
+			// läs in json-fil med restaurang-data:
 			const xmlhttp = new XMLHttpRequest();
-			const url = "rest.json";
-
 			xmlhttp.onreadystatechange = function() {
 				if (this.readyState == 4 && this.status == 200) {
-					const data = JSON.parse(this.responseText);
-					alert(data) ;
+					const data = JSON.parse(this.responseText) ;
 				}
-			};
-			xmlhttp.open("GET", url, true);
-			xmlhttp.send();	
+			} ;
+			xmlhttp.open("GET" , "rest.json" , true) ;
+			xmlhttp.send() ;	
 			
 		
 			
