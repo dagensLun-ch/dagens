@@ -17,7 +17,14 @@
 		</style>
 	</head>
 	<body>
-
+		<script>
+			const svDag = ["s&ouml;n" , "m&aring;n" , "tis" , "ons" , "tors" , "fre" , "l&ouml;r"] ;
+			const svMan = ["NULL" , "januari" , "februari" , "mars" , "april" , "maj" , "juni" , "juli" , "augusti" , "september" , "oktober" , "november" , "december"] ;
+			const d = new Date() ;
+			const manad = svMan[1+d.getMonth()] ;
+			const dagen = svDag[d.getDay()] ;
+			      dagen += 'dag' ;
+		</script>
 	</body>
 </html>
 
