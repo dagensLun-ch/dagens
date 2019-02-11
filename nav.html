@@ -18,6 +18,8 @@
 	</head>
 	<body>
 		<script>
+			//const data = require('./rest.json') ;
+			
 			const svDag = ["s&ouml;n" , "m&aring;n" , "tis" , "ons" , "tors" , "fre" , "l&ouml;r"] ;                                                                        // svenska veckodagar
 			const svMan = ["NULL" , "januari" , "februari" , "mars" , "april" , "maj" , "juni" , "juli" , "augusti" , "september" , "oktober" , "november" , "december"] ;  // svenska månader
 			const d = new Date() ;                                                                                                                                          // datumombjekt
@@ -26,7 +28,8 @@
 			const dagen = svDag[d.getDay()] + "dagen den " ;                                                                                                                // aktuell veckodag på svenska                     
 			const bokst = -1 == [1,2,21,22,31].indexOf(datum) ? "e" : "a" ;                                                                                                 // a eller e beroende på dag i månaden                   
 			const svDat = dagen + datum + ":" + bokst + " " + manad ;
-			  
+			
+			alert(svDat) ;
 		</script>
 	</body>
 </html>
