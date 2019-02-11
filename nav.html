@@ -27,14 +27,18 @@
 			const bokst = -1 == [1,2,21,22,31].indexOf(datum) ? "e" : "a" ;                                                                                                 // a eller e beroende på dag i månaden                   
 			const svDat = dagen + datum + ":" + bokst + " " + manad ;
 			
-			var xhttp = new XMLHttpRequest() ;
-			xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					const rest = this.responseText;
-				}
-			} ;
-			xhttp.open("GET", "https://dagenslun-ch.github.io/dagens/rest.json", true);
-			xhttp.send();
+			alert(loadDoc());
+			
+			function loadDoc() {
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						return this ;
+					}
+				};
+				xhttp.open("GET", "rest.json", true);
+				xhttp.send();
+			}
 			
 			alert(rest) ;
 		</script>
