@@ -27,7 +27,7 @@
 			const bokst = -1 == [1,2,21,22,31].indexOf(datum) ? "e" : "a" ;                                                                                                 // a eller e beroende på dag i månaden                   
 			const svDat = dagen + datum + ":" + bokst + " " + manad ;
 			
-			alert(loadDoc());
+			
 			
 			function loadDoc() {
 				var xhttp = new XMLHttpRequest();
@@ -40,7 +40,7 @@
 				xhttp.send();
 			}
 			
-			alert(rest) ;
+		alert( loadDoc() );
 		</script>
 	</body>
 </html>
