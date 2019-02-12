@@ -20,7 +20,7 @@ function getDoc(url) {
 	xmlhttp.send() ;
 }
 
-const data = getDoc("rest.js") ;
+const data = getDoc("rest.json") ;
 alert(data[1].NAM);
 
 function makeNavLink() {
