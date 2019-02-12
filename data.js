@@ -1,3 +1,4 @@
+const data =
 [
     {"LAB": "Rac", "NAM": "Racines", "URL": "http://racines.se/meny/", "HGT": "2200"}, 
     {"LAB": "GGS", "NAM": "Gefle Gourmetservice", "URL": "http://sandbackapark.se/veckanslunch", "HGT": "1200"}, 
@@ -14,4 +15,4 @@
     {"LAB": "Sel", "NAM": "Selmas", "URL": "http://www.selmas.se/lunchmeny/", "HGT": "1000"}, 
     {"LAB": "TrB", "NAM": "Trebo brygga", "URL": "http://www.trebobrygga.se/", "HGT": "1500"}, 
     {"LAB": "HQv", "NAM": "H&ouml;gbo Qvarn", "URL": "http://www.hogboqvarn.se/lunchmeny", "HGT": "900"}, 
-]
+] ;
