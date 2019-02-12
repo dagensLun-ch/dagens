@@ -21,7 +21,7 @@ function getDoc(url) {
 }
 
 const data = getDoc("rest.json") ;
-alert(data[1].NAM);
+alert(data);
 
 function makeNavLink() {
 
