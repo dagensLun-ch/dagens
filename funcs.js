@@ -19,3 +19,14 @@ function getDoc(url) {
 	xmlhttp.open("GET" , url , true) ;
 	xmlhttp.send() ;
 }
+
+const data = getDoc("rest.js") ;
+alert(data[1].NAM);
+
+function makeNavLink() {
+
+}
+
+function makeMenu() {
+
+}
