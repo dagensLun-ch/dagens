@@ -27,34 +27,12 @@
 				overflow: hidden ;
 			}
 		</style>
-		<script type="text/javascript">
-			window.onbeforeunload = function () 
-			{
-				window.scrollTo(0 , 0) ;
-			}
-			
-			function changeHeight(id , factor)
-			{
-				document.getElementById(id).height = parseInt(document.getElementById(id).height) + factor ;
-			}
-		</script>
+		<script type="text/javascript" src="data.js"></script>
+		<script type="text/javascript" src="funcs.js"></script>
 	</head>
 	<body>
-		
+		<script  type="text/javascript">
+			makeMenus() ;
+		</script>	
 	</body>
 </html>
-<!--
-<?php
-	include ("funcs.php") ;
-	init() ;
-	global $data ;
-	
-	foreach ($data as $key => $i)
-	{
-		echo t(2) . '<fieldset id="' . $key . '">' . t(3) . '<legend>' . $i[0] . '</legend>' . makeMenu($key) .  t(2)  . '</fieldset><br>' ;
-	}
-	echo t(0) ;
-?>
--->
-
-
