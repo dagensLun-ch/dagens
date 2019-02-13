@@ -49,29 +49,23 @@ function makeMenus() {
 	for (i=0 ; i<data.length ; i++) {
 		menu = document.createElement("fieldset") ;
 		menu.id = data[i].LAB ;
-
 			legd = document.createElement("legend") ;
 			legd.appendChild(document.createTextNode(data[i].NAM)) ;
-
+		menu.appendChild(legd) ;
 			ifrm = document.createElement("iframe") ;
 			ifrm.scrolling = "no" ;
 			ifrm.frameborder = "0" ;
 			ifrm.id = data[i].NAM ;
 			ifrm.src = data[i].URL ;
 			ifrm.height = data[i].HGT ;
-
+		menu.appendChild(ifrm) ;
 			butp = document.createElement("input") ;
 			butp.type = "button" ;
 			butp.value = "+" ;
-			butp.onClick = "changeHeight(" + data[i].NAM + " , 100)" ;
-		
-		menu.appendChild(legd) ;
-		menu.appendChild(ifrm) ;
+			butp.onClick = "changeHeight(" + data[i].NAM + " , 100)" ;		
 		menu.appendChild(butp) ;
-		
 		document.body.appendChild(menu) ;
 		document.body.innerHTML += "<br>" ;
-		
 	}
 }
 
