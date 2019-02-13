@@ -6,7 +6,7 @@ function displayDate() {
 	const manad = svMan[1+d.getMonth()] ;                                                                                                                           // aktuell månad på svenska
 	const dagen = svDag[d.getDay()] + "dagen den " ;                                                                                                                // aktuell veckodag på svenska                     
 	const bokst = -1 == [1,2,21,22,31].indexOf(datum) ? "e" : "a" ;                                                                                                 // a eller e beroende på dag i månaden                   
-	document.getElementById("date).innerHTML = dagen + datum + ":" + bokst + " " + manad ;
+	document.getElementById("date").innerHTML = dagen + datum + ":" + bokst + " " + manad ;
 }
 
 function getDoc(url) {
