@@ -21,8 +21,7 @@ function getDoc(url) {
 }
 
 function makeNavLinks() {
-	var i ;
-	var link ;
+	var i , link ;
 	for (i=0 ; i<data.length ; i++) {
 		link = document.createElement("a") ;
 		link.appendChild(document.createTextNode(data[i].NAM)) ;
