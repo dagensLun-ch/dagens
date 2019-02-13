@@ -30,6 +30,7 @@ function makeNavLinks() {
 		document.getElementById("links").appendChild(link) ;
 		document.getElementById("links").innerHTML += "<br>" ;
 	}
+}
 
 function makeMenu() {
 
