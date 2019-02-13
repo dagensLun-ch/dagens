@@ -9,6 +9,14 @@ function displayDate() {
 	document.getElementById("date").innerHTML = dagen + datum + ":" + bokst + " " + manad ;
 }
 
+/* ~~~ */
+
+function changeHeight(id , factor) {
+	document.getElementById(id).height = parseInt(document.getElementById(id).height) + factor ;
+}
+
+/* ~~~ */
+
 function getDoc(url) {
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
@@ -19,6 +27,8 @@ function getDoc(url) {
 	xmlhttp.open("GET" , url , true) ;
 	xmlhttp.send() ;
 }
+
+/* ~~~ */
 
 function makeNavLinks() {
 	var i , link ;
@@ -32,6 +42,36 @@ function makeNavLinks() {
 	}
 }
 
-function makeMenu() {
+/* ~~~ */
 
+function makeMenus() {
+	var i , menu , legd , ifrm , butp , butm ;
+	for (i=o ; i<data.length ; i++) {
+		menu = document.createElement("fieldset") ;
+		menu.id = data[i].LAB ;
+
+			legd = document.createElement("legend") ;
+			legd.appendChild(document.createTextNode(data[i].NAM)) ;
+
+			ifrm = document.createElement("iframe") ;
+			ifrm.scrolling = "no" ;
+			ifrm.frameborder = "0" ;
+			ifrm.id = data[i].NAM ;
+			ifrm.src = data[i].URL ;
+			ifrm.height = data[i].HGT ;
+
+			butp = document.createElement("input") ;
+			butp.type = "button" ;
+			butp.value = "+" ;
+			butp.onClick = "changeHeight(" + data[i].NAM + " , 100)" ;
+		
+		menu.appendChild(legd) ;
+		menu.appendChild(ifrm) ;
+		menu.appendChild(butp) ;
+		
+		document.innerHTML += "<br>" ;
+		
+	}
 }
+
+/* ~~~ */
