@@ -1,4 +1,4 @@
-function svDat() {
+function displayDate() {
 	const svDag = ["s&ouml;n" , "m&aring;n" , "tis" , "ons" , "tors" , "fre" , "l&ouml;r"] ;                                                                        // svenska veckodagar
 	const svMan = ["NULL" , "januari" , "februari" , "mars" , "april" , "maj" , "juni" , "juli" , "augusti" , "september" , "oktober" , "november" , "december"] ;  // svenska månader
 	const d = new Date() ;                                                                                                                                          // datumombjekt
@@ -6,7 +6,7 @@ function svDat() {
 	const manad = svMan[1+d.getMonth()] ;                                                                                                                           // aktuell månad på svenska
 	const dagen = svDag[d.getDay()] + "dagen den " ;                                                                                                                // aktuell veckodag på svenska                     
 	const bokst = -1 == [1,2,21,22,31].indexOf(datum) ? "e" : "a" ;                                                                                                 // a eller e beroende på dag i månaden                   
-	return dagen + datum + ":" + bokst + " " + manad ;
+	document.getElementById("date).innerHTML = dagen + datum + ":" + bokst + " " + manad ;
 }
 
 function getDoc(url) {
@@ -20,12 +20,17 @@ function getDoc(url) {
 	xmlhttp.send() ;
 }
 
-
-alert(data);
-
-function makeNavLink() {
-
-}
+function makeNavLinks() {
+	var i ;
+	var link ;
+	for (i=0 ; i<data.length ; i++) {
+		link = document.createElement("a") ;
+		link.appendChild(document.createTextNode(data[i].NAM) ;
+		link.href = "menus.html#" + data[i].LAB ;
+		link.target = "menus" ;	
+		document.getElementById("links").appendChild(link) ;
+		document.getElementById("links").innerHTML += "<br>" ;
+	}
 
 function makeMenu() {
 
