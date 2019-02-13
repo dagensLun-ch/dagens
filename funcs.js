@@ -69,7 +69,8 @@ function makeMenus() {
 		menu.appendChild(ifrm) ;
 		menu.appendChild(butp) ;
 		
-		document.innerHTML += "<br>" ;
+		document.body.innerHTML += menu ;
+		document.body.innerHTML += "<br>" ;
 		
 	}
 }
