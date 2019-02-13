@@ -1,12 +1,23 @@
+Date.prototype.getWeekNumber = function() {
+	var d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
+	var dayNum = d.getUTCDay() || 7;
+	d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+	var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+	return Math.ceil((((d - yearStart) / 86400000) + 1)/7)
+} ;
+
+/* ~~~ */
+
 function displayDate() {
 	const svDag = ["s&ouml;n" , "m&aring;n" , "tis" , "ons" , "tors" , "fre" , "l&ouml;r"] ;                                                                        // svenska veckodagar
 	const svMan = ["NULL" , "januari" , "februari" , "mars" , "april" , "maj" , "juni" , "juli" , "augusti" , "september" , "oktober" , "november" , "december"] ;  // svenska månader
 	const d = new Date() ;                                                                                                                                          // datumombjekt
 	const datum = d.getDate() ;                                                                                                                                     // dag i månaden
 	const manad = svMan[1+d.getMonth()] ;                                                                                                                           // aktuell månad på svenska
-	const dagen = svDag[d.getDay()] + "dagen den " ;                                                                                                                // aktuell veckodag på svenska                     
+	const dagen = svDag[d.getDay()] + "dag " ;                                                                                                                // aktuell veckodag på svenska                     
 	const bokst = -1 == [1,2,21,22,31].indexOf(datum) ? "e" : "a" ;                                                                                                 // a eller e beroende på dag i månaden                   
-	document.getElementById("date").innerHTML = dagen + datum + ":" + bokst + " " + manad ;
+	const vecka = d.getWeekNumber() ;
+	document.getElementById("date").innerHTML = datum + ":" + bokst + " " + manad + "<br>" + dagen + "v. " + vecka ;
 }
 
 /* ~~~ */
