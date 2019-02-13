@@ -25,7 +25,7 @@ function makeNavLinks() {
 	var link ;
 	for (i=0 ; i<data.length ; i++) {
 		link = document.createElement("a") ;
-		link.appendChild(document.createTextNode(data[i].NAM) ;
+		link.appendChild(document.createTextNode(data[i].NAM)) ;
 		link.href = "menus.html#" + data[i].LAB ;
 		link.target = "menus" ;	
 		document.getElementById("links").appendChild(link) ;
