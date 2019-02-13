@@ -46,7 +46,7 @@ function makeNavLinks() {
 
 function makeMenus() {
 	var i , menu , legd , ifrm , butp , butm ;
-	for (i=o ; i<data.length ; i++) {
+	for (i=0 ; i<data.length ; i++) {
 		menu = document.createElement("fieldset") ;
 		menu.id = data[i].LAB ;
 
