@@ -89,3 +89,16 @@ function getMenu(rest) {
 }
 
 /* ~~~ */
+
+/*
+Hämta NAM där LAB=Cor:
+
+  var r = data.filter(
+      function(data) {
+        return data.LAB == "Cor";
+      }
+  )[0];
+
+console.log(r.NAM);
+
+*/
