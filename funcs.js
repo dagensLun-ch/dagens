@@ -81,3 +81,11 @@ function makeMenus() {
 }
 
 /* ~~~ */
+
+function getMenu(rest) {
+	const page = getDoc("http://http://racines.se/meny/") ;
+	alert(page) ;
+
+}
+
+/* ~~~ */
